@@ -4,7 +4,7 @@ TON Play allows developers to add blockchain elements to any mobile or web game.
 
 See also:  
 - [TON Play Unity SDK](https://github.com/ton-play/tonplay-unity-sdk) — this SDK allows you to get blockchain assets related to your game and to a specific user.
-- [TON Play Telegram Bot](https://github.com/ton-play/tonplay-telegram-bot) — This is a simple example of a Telegram bot to run your game.
+- [TON Play Telegram Bot](https://github.com/ton-play/tonplay-telegram-bot) — this is a simple example of a Telegram bot to run your game.
 
 Table of contents
 - [Use-cases](#use-cases)
