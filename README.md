@@ -2,6 +2,11 @@
 
 TON Play allows developers to add blockchain elements to any mobile or web game. Additionally, you can port any web game to launch directly inside Telegram via a Web App.
 
+See also:  
+- [TON Play Unity SDK](https://github.com/ton-play/tonplay-unity-sdk) — this SDK allows you to get blockchain assets related to your game and to a specific user.
+- [TON Play Telegram Bot](https://github.com/ton-play/tonplay-telegram-bot) — This is a simple example of a Telegram bot to run your game.
+
+Table of contents
 - [Use-cases](#use-cases)
 - [Installation](#installation)
 - [Quick start](#quick-start)
@@ -9,7 +14,7 @@ TON Play allows developers to add blockchain elements to any mobile or web game.
   - [React Wrapper Test your build](#react-wrapper-test-your-build)
   - [React Wrapper Custom build](#react-wrapper-custom-build)
 - [React Wrapper Debug Console](#react-wrapper-debug-console)
-- [Main feature](#main-feature)
+- [Main Unity feature](#main-unity-feature)
 - [Custom loading screen](#custom-loading-screen)
 
 ## Use-cases
@@ -117,16 +122,26 @@ Functions in TelegramAPI
 ## Custom loading screen
 
 You can modify your loading screen if you like.
-
 An easy way to change the background, change the loading bar and add animation.
+
+For example how to change logo:
 
 1. Open src -> app.component.tsx
 2. Remove the comment from one of the lines
 
-`{/* <img className="img" src="/images/logo.png"></img> */}`
-or
-`{/* <img className="img" src="/images/animatedLogo.gif"></img> */}`
+`{/* <img className="img" src="/images/logo.png"></img> */}`    
+or    
+`{/* <img className="img" src="/images/animatedLogo.gif"></img> */}`   
 
-3. In Visual Studio Code, do npm i (if you haven't already) 4. Next, in the terminal, npm run start and see what the loading screen looks like in your browser. 5. In the piblic -> Image folder, replace animatedLogo.gif or logo.png (if you want to change the logo). You can replace any pictures (we recommend using the same sizes).
+<img width="800" alt="uncommit logo" src="https://github.com/ton-play/tonplay-unity-react-wrapper/assets/111277652/8d0725ff-8b9a-456a-bb26-73e0b20973b2">
+
+
+3. In Visual Studio Code, do `npm i` (if you haven't done). 
+4. Next, in the terminal, `npm run start` and see what the loading screen looks like in your browser.  
+5. In the piblic -> Image folder, replace animatedLogo.gif or logo.png (if you want to change the logo). You can replace any pictures (we recommend using the same sizes).  
+
+<img width="730" alt="SelectLogoImg" src="https://github.com/ton-play/tonplay-unity-react-wrapper/assets/111277652/ac04f720-ec73-40f2-be02-333777f8ae00">
+
+6. Next, in the terminal, `npm run start` and see what the loading screen looks like in your browser now.
 
 If you have enough experience, you can modify the loading screen as you like.
