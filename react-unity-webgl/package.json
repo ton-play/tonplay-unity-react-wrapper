@@ -19,8 +19,7 @@
     "react-unity-webgl": "^9.0.4",
     "react-web-share": "^2.0.2",
     "telegram-webapps-types-new": "^1.0.1",
-    "typescript": "^4.7.4",
-    "use-open-window": "^1.5.0"
+    "typescript": "^4.7.4"
   },
   "scripts": {
     "start": "react-scripts start",

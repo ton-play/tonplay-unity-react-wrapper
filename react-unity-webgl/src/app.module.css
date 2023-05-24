@@ -1,7 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Mulish");
 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .container .unityWrapper {
   background: #131314;
   position: absolute;
