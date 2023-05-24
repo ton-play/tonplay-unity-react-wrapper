@@ -8,13 +8,13 @@ See also:
 
 Table of contents
 - [Use-cases](#use-cases)
+- [Main Unity feature](#main-unity-feature)
 - [Installation](#installation)
 - [Quick start](#quick-start)
   - [React Wrapper Simple Test](#react-wrapper-simple-test)
   - [React Wrapper Test your build](#react-wrapper-test-your-build)
   - [React Wrapper Custom build](#react-wrapper-custom-build)
 - [React Wrapper Debug Console](#react-wrapper-debug-console)
-- [Main Unity feature](#main-unity-feature)
 - [Custom loading screen](#custom-loading-screen)
 
 ## Use-cases
@@ -24,6 +24,43 @@ This React wrapper allows:
 1. to optimize the way you launch the game in iFrame or WebApp/WebView
 2. to open external links (for example, invite links or signing transactions)
 3. to open Debug Console in Telegram
+
+## Main Unity feature
+
+<img width="694" alt="TonPlayUnityReactWrapperScreen" src="https://github.com/ton-play/tonplay-unity-react-wrapper/assets/111277652/bdb4fe9e-a476-4b61-a820-99b96eef09f3">
+
+React Wrapper contains a set of methods that allow you to interact with the telegram API, as well as additional functions such as sharing.
+You can use our wrapper for WebGL and use already implemented functions in it.
+When running the game inside a wrapper, you won't have problems with the game rendering incorrectly in the iFrame.
+
+To call wrapper functions from Unity you will need
+
+`using ReactWrapper.ReactAPI;` - to call react functions  
+`using ReactWrapper.TelegramAPI;` - to call Telegram API functions from react.
+
+Functions in React Wrapper:
+
+- `OpenUrl` - opens a link with the selected method
+- `WindowHrefOpen` - opens a link
+- `ShareData` - allows you to share a link
+
+> **Note**
+> Please note that OpenUrl and WindowHrefOpen may not work inside the built-in telegram browser, except for links with a redirect to a deep link application, such as Tonkeeper.
+
+- `ShowLinkButton` - Sometimes it is necessary to open a deep link from a web view and it can be difficult on iOS. This solution should help in most cases to do this. The button is rendered on top of Unity.
+
+     <img width="120" src="https://github.com/ton-play/tonplay-unity-react-wrapper/assets/111277652/f7ea28ec-7b5f-4530-ba10-654022b60b14">
+
+- `HideReactLinkButton` - The function allows you to hide the link Button from unity if necessary
+
+Functions in TelegramAPI
+
+- `OpenLink` - opens a link in an external application from Telegram
+- `OpenTelegramLink` - opens a link inside Telegram
+- `HapticFeedback` - you can call Haptic triggers inside Telegram
+
+> **Note**
+> Please note that the functions exactly work in the Telegram app when running the game as a Web App, since Telegram API above 6.7 is supported there.
 
 ## Installation
 
@@ -89,35 +126,6 @@ If you don't need it, then just delete these lines.
 ```
 
 <img width="445" alt="Console" src="https://user-images.githubusercontent.com/111277652/236259391-bc21606e-a0fb-4b6d-a374-8e4518e0bc13.png">
-
-## Main Unity feature
-
-React Wrapper contains a set of methods that allow you to interact with the telegram API, as well as additional functions such as sharing.
-You can use our wrapper for WebGL and use already implemented functions in it.
-When running the game inside a wrapper, you won't have problems with the game rendering incorrectly in the iFrame.
-
-To call wrapper functions from Unity you will need
-
-`using ReactWrapper.ReactAPI;` - to call react functions  
-`using ReactWrapper.TelegramAPI;` - to call Telegram API functions from react.
-
-Functions in React Wrapper:
-
-- `OpenUrl` - opens a link with the selected method
-- `WindowHrefOpen` - opens a link
-- `ShareData` - allows you to share a link
-
-> **Note**
-> Please note that OpenUrl and WindowHrefOpen may not work inside the built-in telegram browser, except for links with a redirect to a deep link application, such as Tonkeeper.
-
-Functions in TelegramAPI
-
-- `OpenLink` - opens a link in an external application from Telegram
-- `OpenTelegramLink` - opens a link inside Telegram
-- `HapticFeedback` - you can call Haptic triggers inside Telegram
-
-> **Note**
-> Please note that the functions exactly work in the Telegram app when running the game as a Web App, since Telegram API above 6.7 is supported there.
 
 ## Custom loading screen
 
